@@ -11,6 +11,7 @@ export default class Display extends Component {
           <p> Step : {this.props.delta} </p>
           <p> Total summa : {this.props.totalSumma} </p>
           <p className='tamplate'> Current tamplate : {this.props.currentTamplate ? "back" : "forword" }</p>
+          <p>Auto interval will work 30 sec</p>
       </div>
     )
   }
