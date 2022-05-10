@@ -30,7 +30,7 @@ export default class Cliker extends Component {
             return{...state, timeId : null}
         })},30000);
        
-        setInterval(this.changeTime, 1000);
+        this.state.timeId = setInterval(this.changeTime, 1000);
     }
    
     changeTamplate = (data)=>{
