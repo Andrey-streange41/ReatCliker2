@@ -45,7 +45,7 @@ export default class Menu extends Component {
             this.setState((state)=>{
             return {
                 ...state,
-                intervalId : setInterval(this.makeStep, 3000)
+                intervalId : setInterval(this.makeStep, this.props.frequency * 1000)
             }
         }) 
         }
@@ -64,7 +64,12 @@ export default class Menu extends Component {
   render() {
     return (
       <div>
-          <input placeholder='Enter step' name='delta' type="number" onChange={this.onChange} />
+          <div>
+               <input placeholder='Enter step' name='delta' type="number" onChange={this.onChange} />
+          </div>
+          <div>
+               <input placeholder='Frequency' name='frequency' type="number" onChange={this.onChange} />
+          </div>
           <button onClick={this.makeStep}>Make Step forvord</button>
           <button onClick={this.changeTamplate}>Change template</button>
           
