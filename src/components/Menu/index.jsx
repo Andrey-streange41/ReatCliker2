@@ -35,17 +35,23 @@ export default class Menu extends Component {
         this.props.changeTamplate(result);
     }
 
+    componentDidMount(){
+        this.makeStepAuto();
+    }
 
     makeStepAuto = () =>{
-        this.setState((state)=>{
+        if(this.state.intervalId === null){
+            setInterval(this.stopAuto,30000);
+            this.setState((state)=>{
             return {
                 ...state,
                 intervalId : setInterval(this.makeStep, 3000)
             }
         }) 
+        }
     }
 
-    stopAuto=()=>{
+    stopAuto = () => {
         clearInterval(this.state.intervalId);
         this.setState((state)=>{
             return {
