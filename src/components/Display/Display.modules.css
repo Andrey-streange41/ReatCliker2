@@ -1,0 +1,15 @@
+
+*{
+    font-family: sans-serif;
+}
+.display{
+    margin-top: 20px;
+    border: solid blue 2px;
+    width: 20vw;
+}
+
+.tamplate{
+    color: rgb(255, 2, 2);
+    font-family: sans-serif;
+    font-weight: 500;
+}
