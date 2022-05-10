@@ -13,22 +13,7 @@ export default class Cliker extends Component {
         }
     }
 
-    changeState = (data) => {
-        this.setState((state)=>{
-            return {
-                ...state,
-                ...data
-            }
-        })
-    }
-
-    makeStep = (data) =>{
-        this.setState((state)=>{
-            return{...state,
-                ...data
-            }
-        })
-    }
+   
     changeTamplate = (data)=>{
         this.setState((state)=>{
             return{...state,
@@ -40,7 +25,7 @@ export default class Cliker extends Component {
   render() {
     return (
       <div>
-          <Menu changeTamplate={this.changeTamplate} currentTamplate={this.state.currentTamplate} sendData={this.changeState} makeStep={this.makeStep} step={this.state.delta} totalSumma={this.state.totalSumma}/>
+          <Menu changeTamplate={this.changeTamplate} currentTamplate={this.state.currentTamplate} sendData={this.changeTamplate} makeStep={this.changeTamplate} step={this.state.delta} totalSumma={this.state.totalSumma}/>
           <Display currentTamplate={this.state.currentTamplate} delta={this.state.delta} totalSumma={this.state.totalSumma} />
 
       </div>
